@@ -2,9 +2,8 @@ import React from 'react'
 import { useNavigation } from "@react-navigation/native";
 import {PaperProvider,Text,TextInput,Button} from 'react-native-paper';
 import { StyleSheet,View,Image,ScrollView } from "react-native";
-import {useState,useEffect} from 'react';
-import {students} from './StudentDb'
-import BottomTabs from './Bottomtabs'
+
+
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function Profile({route}) {
@@ -16,23 +15,26 @@ export default function Profile({route}) {
         <Image source={require('../assets/uovlogo.png')}
         style={styles.icon}/>
         </View>
-        <View style={styles.profilePicContainer}>
-        <Image source={user.profile_pic} style={styles.profilePic} />
-          <Text style={styles.profileName}>{user.name}</Text>
-      </View>
-
+       <View style={styles.profilePicContainer}>
+       <Image source={user.profile_pic} style={styles.profilePic} />
+       </View>
+      <View style={styles.profileName}>{user.name}</View>
       <View style={styles.profileDetails}>
         <Text style={styles.detail}>Age: {user.age}</Text>
-        <Text style={styles.detail}>Course: {user.course}</Text>
-        <Text style={styles.detail}>Email: {user.email}</Text>
+        <Text style={styles.detail}>Gender: {user.gender}</Text>
+       
+        <Text style={styles.head}>Contact Information</Text>
         <Text style={styles.detail}>Phone: {user.phone}</Text>
+        <Text style={styles.detail}>Email: {user.email}</Text>
+        <Text style={styles.detail}>Address: {user.address}</Text>
+
+        <Text style={styles.head}>Contact Information</Text>
+        <Text style={styles.detail}>Age: {user.age}</Text>
         <Text style={styles.detail}>Gender: {user.gender}</Text>
         <Text style={styles.detail}>Blood Group: {user.blood_group}</Text>
-        <Text style={styles.detail}>Address: {user.address}</Text>
+        
       </View>
-   <NavigationContainer>
-    <BottomTabs/>
-   </NavigationContainer>
+    <View style={styles.footer}> <Text>UOV © 2024</Text></View>
   </ScrollView>
   
   )
@@ -48,7 +50,14 @@ const styles = StyleSheet.create({
         marginLeft:80
 
     },
-   
+    footer:{
+      marginTop: 200, 
+      backgroundColor:'#8B008B',
+      marginLeft:10,
+      marginRight:10,
+      height:20,
+      alignItems:'center'
+    },
       profileName: {
         fontSize: 24,
         fontWeight: 'bold',
@@ -61,6 +70,7 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100,
         borderRadius: 50,
+        alignItems:'center'
       },
       profileDetails: {
         padding: 10,
@@ -69,6 +79,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginBottom: 10,
       },
+      head:{
+        fontWeight:'bold',
+        fontSize:20
+      }
    
     
 })

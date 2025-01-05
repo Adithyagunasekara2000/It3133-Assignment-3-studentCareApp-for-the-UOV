@@ -13,7 +13,7 @@ export default function Login(){
         const user=students.find((student)=>
         student.username===username && student.password===password);
         if(user){
-            navigation.replace('Main', { user });
+            navigation.navigate('bottom',{user});
         }else{
             Alert.alert('login failed','Invalid username or password',[{text:'Ok'}]);
         }
