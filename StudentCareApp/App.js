@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {SafeAreaProvider} from 'react-native-safe-area-context'
 import Login from './components/Login';
-import Profile from './components/Profile';
+//import Profile from './components/Profile';
+import BottomTabs from './components/Bottomtabs'; 
 //import Course from './components/Course';
 const Stack=createNativeStackNavigator();
 
@@ -22,8 +23,13 @@ const Stack=createNativeStackNavigator();
       }
       >
         <Stack.Screen name="login" component={Login} options={{title:"UOV Student Care"}} />
-        <Stack.Screen name='profile' component={Profile} options={{title:"UOV Student Care"}}/>
-      </Stack.Navigator>
+       
+        <Stack.Screen name="Main" component={BottomTabs} />
+        </Stack.Navigator>
+      
+     
+         
+       
     </NavigationContainer>
    </SafeAreaProvider>
    
