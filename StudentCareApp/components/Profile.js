@@ -17,18 +17,18 @@ export default function Profile({route}) {
         </View>
        <View style={styles.profilePicContainer}>
        <Image source={user.profile_pic} style={styles.profilePic} />
-       </View>
+      
       <View style={styles.profileName}>{user.name}</View>
       <View style={styles.profileDetails}>
-        <Text style={styles.detail}>Age: {user.age}</Text>
-        <Text style={styles.detail}>Gender: {user.gender}</Text>
-       
+        <Text style={styles.detail}>Age: {user.age} | Gender: {user.gender}</Text>
+        </View>
+        <View style={styles.separator} />
         <Text style={styles.head}>Contact Information</Text>
         <Text style={styles.detail}>Phone: {user.phone}</Text>
         <Text style={styles.detail}>Email: {user.email}</Text>
         <Text style={styles.detail}>Address: {user.address}</Text>
-
-        <Text style={styles.head}>Contact Information</Text>
+        <View style={styles.separator} />
+        <Text style={styles.head}>Biological Information</Text>
         <Text style={styles.detail}>Age: {user.age}</Text>
         <Text style={styles.detail}>Gender: {user.gender}</Text>
         <Text style={styles.detail}>Blood Group: {user.blood_group}</Text>
@@ -67,22 +67,29 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
       },
+      separator: {
+        height: 1,
+        width: '100%',
+        backgroundColor: '#ccc',
+        marginVertical: 10, 
+    },
       profilePic: {
         width: 100,
         height: 100,
         borderRadius: 50,
-        alignItems:'center'
+        alignItems:'center',
+        borderRadius: 50,
       },
       profileDetails: {
         padding: 10,
       },
       detail: {
-        fontSize: 16,
+        fontSize: 14,
         marginBottom: 10,
       },
       head:{
         fontWeight:'bold',
-        fontSize:20
+        fontSize:16
       }
    
     
