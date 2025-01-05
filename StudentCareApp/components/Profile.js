@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
       profileName: {
         fontSize: 24,
         fontWeight: 'bold',
+        alignItems: 'center',
       },
       profilePicContainer: {
         alignItems: 'center',
