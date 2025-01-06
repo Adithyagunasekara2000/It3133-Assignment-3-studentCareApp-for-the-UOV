@@ -1,10 +1,6 @@
 import React from 'react'
-import { useNavigation } from "@react-navigation/native";
 import {PaperProvider,Text,TextInput,Button} from 'react-native-paper';
 import { StyleSheet,View,Image,ScrollView } from "react-native";
-
-
-import { NavigationContainer } from '@react-navigation/native';
 
 export default function Profile({route}) {
     const { user } = route.params;
