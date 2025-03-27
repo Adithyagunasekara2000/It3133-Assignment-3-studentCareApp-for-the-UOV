@@ -22,6 +22,6 @@ The Student Management System is a mobile application built using React Native t
 
 
  **output**
- 
-   ![Screenshot 2025-01-05 224747](https://github.com/user-attachments/assets/926a6fb2-1739-428![Screenshot 2025-01-05 224811](https://github.com/user-attachments/assets/547fb23b-8c7d-4cfb-8b85-22689a2ee879)
-6-8c19-1ea0da95d211)
+6-8c19-1ea0da95d211)![Screenshot 2025-01-05 224811](https://github.com/user-attachments/assets/42262291-53d0-458d-b96e-315ee33547bb)
+
+
